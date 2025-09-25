@@ -10,12 +10,15 @@
     <div id="container">
         <h1>Guessing The Number Game</h1>
         <p class="intro">Try Guessing Number Between 1 and 50</p>
-        <p class="intro">You Have 10 Attempts</p>
+        <p class="intro">You Have 10 Attempts Max.</p>
         <h2>Guess Here</h2>
-        <input type="text" id="nums" placeholder="Enter A Number">
-        <p><button id="submitbtn">SUBMIT</button></p>
-        <p class="outputs" id="prev">Previous Guesses: <span></span></p>
-        <p class="outputs" id="final">Guesses Remaining: <span>10</span></p>
+        <form action="submit">
+            <input type="text" id="nums" placeholder="Enter A Number">
+            <p><button id="submitbtn">SUBMIT</button></p>
+        </form>
+        <p class="outputs">Previous Guesses: <span id="prev"></span></p>
+        <p class="outputs">Guesses Remaining: <span id="final">10</span></p>
+        <p class="outputs" id="curr"></p>
         </div>
     <script src="script4.js"></script>
 </body>
