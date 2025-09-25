@@ -14,7 +14,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding: 20px;
-    color: #333;
+    color: #101010;
 }
 
 /* Header styles */
@@ -26,13 +26,13 @@ header {
 header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
-    color: #fff;
+    color: #252525;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 header p {
     font-size: 1.2rem;
-    color: #f0f0f0;
+    color: #191818;
 }
 
 /* Project container styles */
@@ -68,5 +68,5 @@ header p {
 footer {
     margin-top: 50px;
     text-align: center;
-    color: #fff;
+    color: #171717;
 }
