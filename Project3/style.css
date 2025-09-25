@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aqua;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    border-radius: 15px;
+    background-color: burlywood;
+}
+#clock{
+    padding: 10px;
+    font: sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+    text-align: center;
+    align-content: center;
+    background-color:darkseagreen;
+}
+#display{
+    font-family: sans-serif;
+    font-size: 40px;
+}
+.inners{
+    margin: 10px;
+}
