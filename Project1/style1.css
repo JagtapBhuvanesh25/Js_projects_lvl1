@@ -8,7 +8,6 @@ body {
     color: aliceblue;
     font-family: Arial, sans-serif;
 }
-
 .par {
     display: flex;
     flex-direction: column;
