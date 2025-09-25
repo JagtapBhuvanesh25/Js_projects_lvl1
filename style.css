@@ -35,7 +35,6 @@ header p {
     color: #191818;
 }
 
-/* Project container styles */
 .project-container {
     display: flex;
     gap: 30px;
@@ -43,7 +42,6 @@ header p {
     justify-content: center;
 }
 
-/* Project card styles */
 .project-card {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
