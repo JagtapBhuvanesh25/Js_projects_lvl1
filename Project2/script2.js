@@ -3,7 +3,6 @@ const result = document.querySelector('#calculateBtn');
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-
     const height = Number(document.querySelector('#height').value);
     const weight = Number(document.querySelector('#weight').value);
 
