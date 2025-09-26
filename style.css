@@ -1,70 +1,146 @@
-/* Reset and base styles */
+/* Reset & base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-    color: #101010;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #f5f5f5;
+  overflow-x: hidden;
 }
 
-/* Header styles */
+/* Header */
 header {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInDown 1s ease-in-out;
 }
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #252525;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  font-size: 3.2rem;
+  margin-bottom: 12px;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
 }
 
 header p {
-    font-size: 1.2rem;
-    color: #191818;
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Project container */
 .project-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1100px;
 }
 
+/* Project card */
 .project-card {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 30px 50px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 50px 70px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  transition: all 0.4s ease;
+  text-align: center;
+  cursor: pointer;
+  animation: float 6s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating glow on hover */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 70%);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.project-card:hover::before {
+  opacity: 1;
 }
 
 .project-card a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: #333;
-    font-weight: bold;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: block;
+  margin-top: 12px;
+  transition: color 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-15px) scale(1.07);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+  border-color: #ff6a00;
 }
 
-/* Footer styles */
+.project-card:hover a {
+  color: #ff6a00;
+}
+
+/* Icon inside card */
+.icon {
+  font-size: 3rem;
+  color: #ff6a00;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.project-card:hover .icon {
+  transform: rotate(15deg) scale(1.2);
+  color: #ee0979;
+}
+
+/* Footer */
 footer {
-    margin-top: 50px;
-    text-align: center;
-    color: #171717;
+  margin-top: 70px;
+  text-align: center;
+  color: #ddd;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
