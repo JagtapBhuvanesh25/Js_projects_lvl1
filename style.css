@@ -39,6 +39,7 @@ header p {
 .gradient-text {
   background: linear-gradient(45deg, #ff6a00, #ee0979);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -69,7 +70,6 @@ header p {
 
 /* Floating glow on hover */
 .project-card::before {
-  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
