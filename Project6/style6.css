@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #212121;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#box table {
+    border: 2px solid aliceblue;
+    border-collapse: separate;
+}
+
+#box th, 
+#box td {
+    border: 1px solid aliceblue;
+    padding: 10px 20px;
+    text-align: center;
+}
